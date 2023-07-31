@@ -47,8 +47,5 @@ dentro das tags fechadas podem conter atributos exemplo:
  <p style="font-size:18px;">
  responsavel pelo componentedentro da pasta componentes eu adiciona arquivos jsx,tsx e tudo relacionado ao componetização
 </p>
- <li style="font-size:18px;">
- <li style="font-size:18px;">
- <li style="font-size:18px;">
- <li style="font-size:18px;">
- <li style="font-size:18px;">
+ <li style="font-size:18px;"> Se parar e organizar em pastas components e arq
+ <li style="font-size:18px;"> Pasta Page e relacionado a pagina e rotas

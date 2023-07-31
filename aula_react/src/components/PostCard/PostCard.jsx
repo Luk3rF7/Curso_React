@@ -1,4 +1,4 @@
-
+import './PostCard.css'
 export const PostCard = ({ 
   title,
   cover,
