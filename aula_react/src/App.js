@@ -3,25 +3,48 @@ import './App.css';
 
 class App extends Component {
   state = { 
-   posts: [
-   {
-     id:1,
-    title:' O titulo 1',
-    body:"aqui esta corpo do titulo renderizado no jsx"
-   },
-   {
-     id:2,
-    title:' O titulo 2',
-    body:"O corpo 2"
-   },
-   {
-     id:3,
-    title:' O titulo 3',
-    body:"O corpo 3"
-   },
-   ]
+    counter:0,
+    posts: [
+    {
+      id:1,
+      title:"Titulo dentro do Mount",
+      body:"LifeCycle method"
+    },
+    {
+      id:2,
+      title:"Titulo dentro do Mount",
+      body:"LifeCycle method"
+    },
+    {
+      id:3,
+      title:"Titulo dentro do Mount",
+      body:"LifeCycle method"
+    },
+  ]
   };  
-  
+  timeoutUpdate = null
+  componentDidMount(){
+    this.handleTimeout();
+  }
+
+  componentDidUpdate(){
+    clearTimeout(this.timeoutUpdate)
+    this.handleTimeout();
+  }
+
+  handleTimeout = () => {
+    const { posts,counter } = this.state;
+    posts[0].title = 'O titulo mudou '
+    posts[0].body = "atualizou"
+    //fazendo isso para ter acesso ao time out
+   this.timeoutUpdate = setTimeout(() => {
+      this.setState({
+          posts,
+          counter: counter + 1,
+      })
+    },2000)
+  } 
+
   render(){
     const { posts } = this.state;
 
