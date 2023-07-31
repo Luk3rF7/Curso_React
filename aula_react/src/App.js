@@ -1,67 +1,54 @@
+//      imports
 import { Component } from 'react';
+//    Css
 import './App.css';
+// funçoes 
+import { loadPosts } from './util/load-post';
+//components
+import { PostCard } from './components/PostCard/PostCard';
 
 class App extends Component {
   state = { 
     counter:0,
-    posts: [
-    {
-      id:1,
-      title:"Titulo dentro do Mount",
-      body:"LifeCycle method"
-    },
-    {
-      id:2,
-      title:"Titulo dentro do Mount",
-      body:"LifeCycle method"
-    },
-    {
-      id:3,
-      title:"Titulo dentro do Mount",
-      body:"LifeCycle method"
-    },
-  ]
+    posts: []
   };  
-  timeoutUpdate = null
-  componentDidMount(){
-    this.handleTimeout();
+
+  async componentDidMount(){
+     await this.loadPosts();
   }
 
-  componentDidUpdate(){
-    clearTimeout(this.timeoutUpdate)
-    this.handleTimeout();
+  loadPosts = async () => {
+    const postsAndPhotos = await loadPosts();
+
+    this.setState({ posts: postsAndPhotos})
+
   }
 
-  handleTimeout = () => {
-    const { posts,counter } = this.state;
-    posts[0].title = 'O titulo mudou '
-    posts[0].body = "atualizou"
-    //fazendo isso para ter acesso ao time out
-   this.timeoutUpdate = setTimeout(() => {
-      this.setState({
-          posts,
-          counter: counter + 1,
-      })
-    },2000)
-  } 
+
 
   render(){
     const { posts } = this.state;
 
     return (
+      <>
       <div className="App">
-        <h1> Aula Components com Array e Objetos</h1>
+        <h1> Aula Components Fetch Data</h1>
           <h3>  pegando os posts do Objeto</h3>
-          {posts.map(post =>
-            (
-              <div key={post.id}>
-              <h1>{post.title}</h1>
-                <p> {post.body} </p> 
-                </div> 
-              )
-              )
-            }
       </div>
+        <section className='container'>
+          <div className="posts">
+          {posts.map(post =>(
+           <PostCard
+           key={post.id}
+           title={post.title}
+           body={post.body} 
+           id={post.id}
+           cover={post.cover}
+           />
+              ))}
+            </div>
+            </section>
+      </>
     )
   }
 }
