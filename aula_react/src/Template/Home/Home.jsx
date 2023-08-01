@@ -6,6 +6,7 @@ import './Home.css';
 import { loadPosts } from '../../util/load-post';
 import { Posts } from '../../components/Post/Posts';
 import { Button } from '../../components/Button/Button';
+import { TextInput } from '../../components/TextInput/TextInpput';
 
 
 class Home extends Component {
@@ -14,7 +15,8 @@ class Home extends Component {
     posts: [],
     allPosts: [],
     page:0,
-    postsPerPage:53
+    postsPerPage:53,
+    searchValue: ''
   };  
 
   async componentDidMount(){
@@ -47,13 +49,23 @@ class Home extends Component {
     this.setState({posts, page:nextPage})
     console.log(page,postsPerPage,nextPage,nextPage + postsPerPage)
   } 
+  handleChange = (e) => {
+     const {value} = e.target;
+     this.setState({searchValue: value})
+  }
 
 
 
   render(){
-    const { posts,page,postsPerPage,allPosts } = this.state;
+    const { posts,page,postsPerPage,allPosts,searchValue } = this.state;
     const noMorePosts = page + postsPerPage >= allPosts.length;
 
+    const filteredPosts = !!searchValue ? 
+    posts.filter(post => {
+      return post.title.toLowerCase().includes(
+        searchValue.toLowerCase());
+    }) 
+    : posts;
     return (
       <>
       <div className="App">
@@ -61,13 +73,33 @@ class Home extends Component {
           <h3>  pegando os posts do Objeto</h3>
       </div>
         <section className='container'>
-        <Posts posts={posts} />
-        <div className="button-container">
+          <div className="search-container">
 
-        <Button 
-         text="load more post"
-         onClicks={this.loadMorePosts}
-         disabled={noMorePosts}/>
+          {!!searchValue && (
+            <>
+             <h2>Search value: {searchValue}</h2>
+            </>
+          )}
+          </div>
+            <TextInput
+            searchValue={searchValue} 
+            handleChange={this.handleChange}/>
+           {filteredPosts.length > 0 &&  (
+             <Posts posts={filteredPosts} />
+
+           )}
+           {filteredPosts.length === 0 &&  (
+             <p>não existe posts</p>
+
+           )}
+        <div className="button-container">
+            {!searchValue && (
+
+              <Button 
+              text="load more post"
+              onClicks={this.loadMorePosts}
+              disabled={noMorePosts}/>
+              )}
          </div>
         </section>
       </>
