@@ -2,6 +2,12 @@
 
 <p style="font-size:18px;">
  Como utilizar padrão de organizção,react e uma  biblioteca como exemplo handle:
+
+ <li style="font-size:18px">
+ Props são coisas que passo meu conponents
+
+ <li style="font-size:18px">
+ state ele  rendezira para o react
  
 <h3> O que é componente ? </h3>
 
