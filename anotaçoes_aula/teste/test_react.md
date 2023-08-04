@@ -6,7 +6,8 @@
 <p> toBe = '==='
 <p> expect =
 <p> toEqual = objeto ou funcao
-
+<p> podemos utilizar tanto it com test
+ 
               describe('makePoniesPink', () => {
                 beforeAll(() => {
                   /* Runs before all tests */

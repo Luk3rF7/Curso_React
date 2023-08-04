@@ -82,7 +82,7 @@ export const Home = () =>  {
           {!searchValue && (
 
             <Button 
-            text="load more post"
+            text="Load more posts"
             onClicks={loadMorePosts}
             disabled={noMorePosts}/>
             )}
