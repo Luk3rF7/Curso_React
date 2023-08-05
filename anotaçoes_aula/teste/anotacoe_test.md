@@ -22,3 +22,7 @@ aonde utilizamos index.spec.jsx/tsx </p>
 na libary podemos disparar evento com fireEvent </p>
 <p> podemos utilizar tbm useEvent 
 <p> coverage ele vai ajuda a gente a mostra os lugares onde falta fazer teste 
+
+<h2> Mock e jest </h2>
+
+<img src="./img/mockTeste.png">

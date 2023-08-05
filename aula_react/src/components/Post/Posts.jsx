@@ -1,6 +1,7 @@
 import { PostCard } from '../PostCard/PostCard';
 import './Post.css'
-export const Posts = ({ posts }) => {
+
+export const Posts = ({ posts= [] }) => {
 
   return (
         <div className="posts">
