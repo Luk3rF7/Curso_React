@@ -1,5 +1,6 @@
 module.exports = {
     "env": {
+<<<<<<< HEAD
       "browser": true,
       "es2021": true,
       "node": true,
@@ -37,3 +38,36 @@ module.exports = {
       }
     }
   };
+=======
+        "browser": true,
+        "es2021": true,
+        "node": true
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended"
+    ],
+    "overrides": [
+        {
+            "env": {
+                "node": true
+            },
+            "files": [
+                ".eslintrc.{js,cjs}"
+            ],
+            "parserOptions": {
+                "sourceType": "script"
+            }
+        }
+    ],
+    "parserOptions": {
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react"
+    ],
+    "rules": {
+    }
+}
+>>>>>>> 106e50067825d941d0e92d50fbbe4f5ca2f934e8

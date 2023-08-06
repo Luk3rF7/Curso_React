@@ -37,7 +37,11 @@
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.17.0",
+<<<<<<< HEAD
     "eslint-plugin-react": "^7.33.1",
     "jest-watch-typeahead": "^0.6.5"
+=======
+    "eslint-plugin-react": "^7.33.1"
+>>>>>>> 106e50067825d941d0e92d50fbbe4f5ca2f934e8
   }
 }
