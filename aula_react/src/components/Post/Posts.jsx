@@ -1,7 +1,8 @@
 import { PostCard } from '../PostCard/PostCard';
 import './Post.css'
+import Props from 'prop-types';
 
-export const Posts = ({ posts= [] }) => {
+export const Posts = ({ posts = [] }) => {
 
   return (
         <div className="posts">
@@ -17,3 +18,24 @@ export const Posts = ({ posts= [] }) => {
       </div>
     )
 }
+
+Posts.defaultProps = {
+  posts: [],
+};
+
+Posts.propTypes = {
+  posts: Props.array,
+};
+
+/* 
+* metodo mais complexo: 
+ Posts.propTypes = {
+  posts: Props.arrayOf(
+    Props.shape({
+        title: Props.string.isRequired,
+        cover: Props.string.isRequired,
+        body: Props.string.isRequired,
+        id: Props.number.isRequired,
+    })
+  ),
+}; */
