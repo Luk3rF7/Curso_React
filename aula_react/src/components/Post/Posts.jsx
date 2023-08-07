@@ -1,13 +1,10 @@
 import { PostCard } from '../PostCard/PostCard';
 import './Post.css'
-<<<<<<< Updated upstream
+
 import Props from 'prop-types';
 
-export const Posts = ({ posts = [] }) => {
-=======
-import Props
 export const Posts = ({ posts= [] }) => {
->>>>>>> Stashed changes
+
 
   return (
         <div className="posts">
@@ -15,7 +12,7 @@ export const Posts = ({ posts= [] }) => {
                 <PostCard
                   key={post.id}
                   title={post.title}
-                  body={post.body} 
+                  body={post.body}
                   id={post.id}
                   cover={post.cover}
                     />
@@ -23,7 +20,6 @@ export const Posts = ({ posts= [] }) => {
       </div>
     )
 }
-<<<<<<< Updated upstream
 
 Posts.defaultProps = {
   posts: [],
@@ -33,8 +29,8 @@ Posts.propTypes = {
   posts: Props.array,
 };
 
-/* 
-* metodo mais complexo: 
+/*
+* metodo mais complexo:
  Posts.propTypes = {
   posts: Props.arrayOf(
     Props.shape({
@@ -45,13 +41,12 @@ Posts.propTypes = {
     })
   ),
 }; */
-=======
 Posts.defaultProps = {
   posts: [],
 }
 
 
-Posts.propTypes = { 
+Posts.propTypes = {
   posts: Props.array,
 }
->>>>>>> Stashed changes
+
