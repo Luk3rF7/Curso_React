@@ -1,10 +1,14 @@
-module.exports = {
+module.exports {
     "env": {
+<<<<<<< Updated upstream
 <<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
       "browser": true,
       "es2021": true,
       "node": true,
       "jest": true
+<<<<<<< Updated upstream
     },
     "extends": [
       "eslint:recommended",
@@ -42,32 +46,43 @@ module.exports = {
         "browser": true,
         "es2021": true,
         "node": true
+=======
+>>>>>>> Stashed changes
     },
     "extends": [
-        "eslint:recommended",
-        "plugin:react/recommended"
-    ],
-    "overrides": [
-        {
-            "env": {
-                "node": true
-            },
-            "files": [
-                ".eslintrc.{js,cjs}"
-            ],
-            "parserOptions": {
-                "sourceType": "script"
-            }
-        }
+      "eslint:recommended",
+      "plugin:prettier/recommended",
+      "plugin:react/recommended",
+      "plugin:react-hooks/recommended"
     ],
     "parserOptions": {
-        "ecmaVersion": "latest",
-        "sourceType": "module"
+      "ecmaFeatures": {
+        "jsx": true
+      },
+      "ecmaVersion": 12,
+      "sourceType": "module"
     },
-    "plugins": [
-        "react"
-    ],
+    "plugins": ["react"],
     "rules": {
+      /* Essa regra indica que ao invés de erro, se torna apenas um warning */
+      "no-unused-vars": [
+        "warn",
+        {
+          "argsIgnorePattern": "^_",
+          "varsIgnorePattern": "^_"
+        }
+      ],
+      "react/react-in-jsx-scope": "off",
+      "no-debugger": "warn"
+    },
+    "settings": {
+      "react": {
+        "version": "detect"
+      }
     }
+<<<<<<< Updated upstream
 }
 >>>>>>> 106e50067825d941d0e92d50fbbe4f5ca2f934e8
+=======
+  }
+>>>>>>> Stashed changes
