@@ -38,8 +38,11 @@
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.17.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.0",
     "eslint-plugin-react": "^7.33.1",
     "jest-watch-typeahead": "^0.6.5",
-    "msw": "^1.2.3"
+    "msw": "^1.2.3",
+    "prettier": "^3.0.1"
   }
 }
