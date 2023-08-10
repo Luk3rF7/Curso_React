@@ -37,7 +37,8 @@ const HookUseState = () => {
       <hr />
       {/* useState e input */}
       <form onSubmit={handleSubmit}>
-        <h2> Digite sua idade :</h2>
+        <h2>UseState e Input</h2>
+        <h4> Digite sua idade :</h4>
         <input
           type="text"
           value={age}
