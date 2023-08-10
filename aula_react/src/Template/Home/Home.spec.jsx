@@ -1,11 +1,10 @@
-describe('<Home />', ()=> {
-  it('test one', ()=> {
-    expect(1).toBe(1);
+import { render, screen } from '@testing-library/react';
+import { Home } from './Home';
+
+describe('<Home />', () => {
+  it('should render search,posts and load more', () => {
+    const { debug } = render(<Home />);
+    const noMorePosts = screen.getByText('não existe posts');
+    debug();
   });
-  it('test two', ()=> {
-    expect(1).toBe(1);
-  });
-  it('teste three', ()=> {
-    expect(1).toBe(1);
-  });
-})
+});
