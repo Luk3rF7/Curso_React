@@ -40,6 +40,7 @@ const HookUserRef = () => {
       <hr />
       {/* useRef com DOM */}
       <form onSubmit={handleSubmit}>
+        <label>UseRef com Dom:</label><br></br>
         <input type="text" ref={inputRef} value={text} onChange={(e) => { setText(e.target.value) }} />
         <input type="submit" value="Enviar" />
       </form>
