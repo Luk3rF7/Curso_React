@@ -13,7 +13,7 @@ const List = ({ getItems }) => {
   }, [getItems]);
   return (
     <div>
-      <h1> List useCallback </h1>
+      <h2> List useCallback </h2>
       {myItems &&
         myItems.map((item) => (
           <p key={item}>{item}</p>
