@@ -3,7 +3,9 @@ import { useState, useEffect, useMemo } from 'react'
 const HookUseMemo = () => {
   const [number, setNumber] = useState(0);
 
-  const premiumNumber = ["0", "100", "200"];
+  const premiumNumber = useMemo(() => {
+    return ["0", "100", "200"]
+  }, []);
 
 
   //  faz alguma coisa qndo premiunNumber for
