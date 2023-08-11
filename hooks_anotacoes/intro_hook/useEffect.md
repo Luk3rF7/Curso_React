@@ -57,5 +57,9 @@ Uma estratégia  interessante par algumas  situações e utilizar  useEffect ape
 
  <br>
  <hr />
- 
+  Com isso a gente sempre devera fazer limpeza após effect 
+  
+  exemplo: 
+<br>
+<img src="./imghook/cleanup_useEffect.png"/>
 </p>
