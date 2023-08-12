@@ -3,7 +3,8 @@
 <h2 align="center"> Components funcionais </h2>
 
 <p style="font-size:18px;">
-A gente vai falar do estado já há um pouquinhopara frente mas a gente teria componentes defunção que
+<b>Os components funcionais são baseado em função ,onde eles renderiza uma parte da função.</b>
+A gente vai falar do estado já há um pouquinho para frente  mas a gente teria componentes defunção que
 seriam componentes sem Estado e a gente teriaantigamente isso não não é assim hoje em dia agente teria
 componentes de d classe com o Estado.
 Então a gente tinha antigamente componentes estruturais que seriam sem Estado e componentes que seriam
@@ -15,12 +16,12 @@ Então aqui há esse componente que ele não tem estado.
 Então ele é um excelente componente mas hoje em dia a gente pode ter funções usando rocks e aí a gente
 utiliza os russos pra controlar o Estado.
 Então hoje em dia isso não se aplica mais beleza então você não precisa saber essa diferenciação está
-aí beleza estética. 
+aí beleza estética.
 </p>
 <hr>
 
-<h3> 
-          
+<h3>
+
             ==== Components less ====
           function App() {
         return (
@@ -78,7 +79,7 @@ aí beleza estética.
 </h3>
 <hr>
 <p style="font-size:18px;">
-    podemos adicionar atributos como onClick onde pode receber 
+    podemos adicionar atributos como onClick onde pode receber
     state,função e eventos:
 
 <h3>
@@ -107,12 +108,11 @@ não consigo acessar variavel do metodo class por que react não faz bind,e tere
                  console.log(frase2)
                }
 
-
 <h3>
   <li style="font-size:18px;"> forma mais curta :
 
-  <p style="font-size:18px;"> podemos mudar o state utilizando setState 
-  conforme o exemplo: 
+  <p style="font-size:18px;"> podemos mudar o state utilizando setState
+  conforme o exemplo:
 
 <h3>
 
@@ -123,7 +123,7 @@ não consigo acessar variavel do metodo class por que react não faz bind,e tere
 
 <h2 align="center">  Single Page com Class
 
-<h4>     
+<h4>
 
          class App extends Component {
                       
