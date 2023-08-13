@@ -1,0 +1,49 @@
+.task {
+  margin-top: 30px;
+}
+
+.task li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding:10px;
+  margin:5px auto;
+  border-radius: 8px;
+  border:1px solid #fee2c0;
+  border-bottom:4px solid #fee2c0;
+  transition: 300ms ease-in;
+}
+
+.task li:hover {
+  background:#fee2c0;
+  border-radius: 8px;
+  box-shadow:4px 4px 0 0  #6B75DF;
+  cursor: pointer;
+}
+.task li p {
+  color:#5c8fce;
+  font-size: 17px;
+  font-weight: bold;
+  transition: 200ms ease-in-out;
+  font-style: italic;
+  
+}
+.task li p:hover {
+  color:#6B75DF;
+  font-weight: bold;
+  transition: 200ms ease-in-out;
+}
+
+.task li .edit {
+  margin-right:15px;
+  color: #6B75DF;
+}
+
+.task li .close {
+  color:red;
+}
+.task li span {
+  display: flex;
+  align-items: center;
+  margin-right: 5px;
+}

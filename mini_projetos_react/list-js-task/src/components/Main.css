@@ -1,13 +1,22 @@
 .main {
   background: #fff;
-  padding:30px;
-  margin:50px auto;
-  border: .1em solid rgba(214,231,252,.2);
   box-shadow: 2px 2px 0 1px rgba(107,117,223,.3);
+  border: .1em solid rgba(214,231,252,.2);
   border-radius: 1.3em;
+  margin:50px auto;
+  padding:30px;
   max-width: 500px;
+  overflow: hidden;
+  
 }
 
 .main h1 {
-  font-size: 20px;
+  text-align: center;
+  font-family: 'Lobster', cursive;
+  font-size: 50px;
+  font-weight: 200;
+  color: #6B75DF;
+  border-bottom: 2px solid #6B75DF;
 }
+
+
