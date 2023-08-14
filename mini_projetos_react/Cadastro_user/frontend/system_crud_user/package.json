@@ -1,5 +1,5 @@
 {
-  "name": "cadastro_user",
+  "name": "system_crud_user",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
