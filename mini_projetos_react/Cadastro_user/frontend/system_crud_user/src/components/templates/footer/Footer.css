@@ -1,0 +1,16 @@
+footer.footer {
+  background-color: var(--color-definir6);
+  border:1px solid var(--color-definir3);
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+footer span {
+  font-family: monospace;
+  font-size: 1.3em;
+}
+footer strong {
+  font-family: 'Lobster', cursive;
+  color:var(--color-definir3);
+  
+}

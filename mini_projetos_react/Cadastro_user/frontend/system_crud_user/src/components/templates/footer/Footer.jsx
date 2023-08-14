@@ -3,5 +3,7 @@ import './Footer.css';
 
 export default props =>
  <footer className="footer">
-  RodaPé
+  <span>
+    Desenvolvido por <strong> Lc Developer</strong>
+  </span>
  </footer>
