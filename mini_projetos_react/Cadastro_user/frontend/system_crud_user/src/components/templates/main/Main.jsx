@@ -1,11 +1,12 @@
-import Header from '../header/Header';
-import './Main.css';
 import React from 'react';
+import './Main.css';
+import Header from '../header/Header'
+export default props =>
 
-export default props => 
   <React.Fragment>
-    <Header />
-    <main className="content">
-      Conteudo
-    </main>
+   <Header />
+    <main className="content" >
+          Conteudo
+      </main>
+
   </React.Fragment>
