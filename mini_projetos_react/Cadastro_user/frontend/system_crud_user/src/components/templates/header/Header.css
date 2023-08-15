@@ -10,3 +10,9 @@ header.header {
 header.header h1 {
   font-size: 1.8em;
 }
+.header h1  {
+  color: var(--color-definir3);
+}
+.header h1 i {
+  color: var(--color-definir3);
+}
