@@ -15,4 +15,5 @@ export default props =>
         {props.title}
     </h1>
     <p className="lead text-muted">{props.subtitle} </p>
+   
   </header>
