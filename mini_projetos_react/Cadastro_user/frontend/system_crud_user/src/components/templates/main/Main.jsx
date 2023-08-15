@@ -8,8 +8,10 @@ export default props =>
       /* receber propriedade */
       {...props}
    />
-    <main className="content" >
-          Conteudo
+    <main className="content container-fluid">
+         <div className="p-3 mt-3 ">
+            {props.children}
+         </div>
       </main>
 
   </React.Fragment>
