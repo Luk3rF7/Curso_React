@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { GlobalContext } from '../context/AppContext';
+import { GlobalContext } from '../../context/AppContext/index';
 
 export const H1 = () => {
   // eu posso utilizar hook useContext para pega value do context
