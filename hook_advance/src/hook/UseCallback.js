@@ -1,7 +1,6 @@
 import P from 'prop-types';
 import React, { useState, useCallback } from 'react';
-//um component
-// o React memo vai memorizar componente se ele nao mudar
+
 const Button = React.memo(function Button({ incrementButton }) {
   console.log(' renderizou filho');
   return <button onClick={() => incrementButton(10)}> + </button>;
@@ -11,8 +10,8 @@ Button.propTypes = {
   incrementButton: P.func,
 };
 
-//useCallback a gente utiliza para otimizar o codigo:
-function UseCallback() {
+//useRef a gente utiliza para referencia elemento:
+function UseRef() {
   const [counter, setCounter] = useState(0);
 
   // para evitar a recriação dessa função:
@@ -34,4 +33,4 @@ function UseCallback() {
     </div>
   );
 }
-export default UseCallback;
+export default UseRef;
