@@ -1,9 +1,10 @@
 import './App.css';
-import { useState } from 'react';
-import { Div } from '../Div/index';
 import { AppContext } from '../../context/AppContext/index';
 import { PostsProvider } from '../../context/PostsProvider/PostProvider';
+import { CounterProvider } from './../../context/CounterProvider/ExampleProvider';
+import { useState } from 'react';
 import { Posts } from '../Posts/Posts';
+import { Div } from '../Div/index';
 import UseEffect from '../../hook/UseEffect';
 import UseCallback from '../../hook/UseCallback';
 import UseMemo from '../../hook/UseMemo';
@@ -28,9 +29,11 @@ function App() {
   return (
     <div className="App">
       <header>
-        <PostsProvider>
-          <Posts />
-        </PostsProvider>
+        <CounterProvider>
+          <PostsProvider>
+            <Posts />
+          </PostsProvider>
+        </CounterProvider>
         <UseReducerContext>
           <AppContext>
             <h1>UseContext:</h1>
