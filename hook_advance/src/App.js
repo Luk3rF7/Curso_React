@@ -1,6 +1,8 @@
-import logo from './logo.svg';
 import './App.css';
 import { useState } from 'react';
+import UseEffect from './hook/UseEffect';
+import UseCallback from './hook/UseCallback';
+import UseMemo from './hook/UseMemo';
 
 function App() {
   const [reverse, setReverse] = useState(false);
@@ -17,11 +19,9 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className={`App-logo ${reverseClass}`} alt="logo" />
-
-        <h1>Contador: {counter}</h1>
-
+      <header>
+        <h1>UseState :</h1>
+        <h4>Contador: {counter}</h4>
         <p>
           <button type="button" onClick={handleClick}>
             Reverse {reverseClass}
@@ -33,6 +33,13 @@ function App() {
           </button>
         </p>
       </header>
+      <hr />
+      <UseEffect />
+      <hr />
+      <UseCallback />
+      <hr />
+      <UseMemo />
+      <hr />
     </div>
   );
 }
